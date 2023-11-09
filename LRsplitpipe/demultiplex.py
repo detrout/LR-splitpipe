@@ -212,7 +212,7 @@ def process_bcs(fnames, oprefix,
 ###################################################################################
 ############################# Argparsing functions ################################
 ###################################################################################
-def get_args():
+def get_args(cmdline=None):
 	parser = argparse.ArgumentParser()
 	subparsers = parser.add_subparsers(dest='mode')
 
@@ -317,11 +317,11 @@ def get_args():
 	# parser_process_bcs.add_argument('--filt_umi', dest='filt_umi', default=False,
 	# 	help='Filter out duplicate UMIs using longest read heuristic')
 
-	args = parser.parse_args()
+	args = parser.parse_args(cmdline)
 	return args
 
-def main():
-	args = get_args()
+def main(cmdline=None):
+	args = get_args(cmdline)
 	mode = args.mode
 	oprefix = args.oprefix
 	t = int(args.threads)
