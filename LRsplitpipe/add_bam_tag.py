@@ -1,7 +1,7 @@
 import pandas as pd
 import argparse
 import os
-from utils import *
+from .utils import *
 
 def get_args():
 	parser = argparse.ArgumentParser()

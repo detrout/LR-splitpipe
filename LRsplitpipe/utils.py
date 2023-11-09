@@ -14,7 +14,7 @@ import pdb
 import gzip
 import json
 from collections import defaultdict
-from plotting import *
+from .plotting import *
 
 
 ###################################################################################

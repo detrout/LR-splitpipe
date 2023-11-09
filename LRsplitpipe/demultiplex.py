@@ -12,8 +12,8 @@ import argparse
 import os
 import pdb
 
-from utils import *
-from plotting import *
+from .utils import *
+from .plotting import *
 
 ###################################################################################
 ############################ Actual function calls ################################
