@@ -7,3 +7,19 @@
 test/
 testing/*pycache*
 *ipynb_checkpoints*
+
+#setuptools_scm version file
+LRsplitpipe/_version.py
+
+# directories created by build process
+.coverage
+dist/
+.eggs/
+*.egg-info/
+*.py[co]
+__pycache__/
+.tox/
+
+#emacs backup files
+*~
+\.#*
