@@ -746,7 +746,7 @@ def correct_barcodes(fnames, oprefix,
 		for df in pd.read_csv(fname, chunksize=chunksize, sep='\t'):
 
 			if t == 1:
-				temp = df.parallel_apply(correct_bcs_x,
+				temp = df.apply(correct_bcs_x,
 						args=(counts, count_thresh, bc_edit_dist, bc1_dict, bc2_dict, bc3_dict),
 						axis=1, result_type='expand')
 			else:
