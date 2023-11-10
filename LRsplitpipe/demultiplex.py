@@ -232,7 +232,7 @@ def get_args(cmdline=None):
 		help='Number of allowable mismatches in linker1')
 	parser_all.add_argument('--l2_mm', dest='l2_mm', default=3,
 		help='Number of allowable mismatches in linker2')
-	parser_all.add_argument('--chunksize', dest='chunksize', default=10**5,
+	parser_all.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in / process at a time')
 	parser_all.add_argument('--max_linker_dist', dest='max_dist', default=None,
 		help='Maximum distance that a linker can be from the end of a read')
@@ -256,7 +256,7 @@ def get_args(cmdline=None):
 		help='Output file path/prefix')
 	parser_score_linkers.add_argument('-t', dest='threads',
 		help='Number of threads to run on (multithreading is recommended)')
-	parser_score_linkers.add_argument('--chunksize', dest='chunksize', default=10**5,
+	parser_score_linkers.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in at any given time')
 	parser_score_linkers.add_argument('--verbosity', dest='verbosity', default=1,
 		help='Verbosity setting. Higher number = more messages')
@@ -281,7 +281,7 @@ def get_args(cmdline=None):
 		help='Number of allowable mismatches in linker1')
 	parser_find_bcs.add_argument('--l2_mm', dest='l2_mm', default=3,
 		help='Number of allowable mismatches in linker2')
-	parser_find_bcs.add_argument('--chunksize', dest='chunksize', default=10**5,
+	parser_find_bcs.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in at any given time')
 	parser_find_bcs.add_argument('--max_linker_dist', dest='max_dist', default=None,
 		help='Maximum distance that a linker can be from the end of a read')
@@ -307,7 +307,7 @@ def get_args(cmdline=None):
 		help='Chemistry used, {v1, v2}')
 	parser_process_bcs.add_argument('-t', dest='threads',
 		help='Number of threads to run on (multithreading is recommended)')
-	parser_process_bcs.add_argument('--chunksize', dest='chunksize', default=10**5,
+	parser_process_bcs.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in at any given time')
 	parser_process_bcs.add_argument('--verbosity', dest='verbosity', default=1,
 		help='Verbosity setting. Higher number = more messages')
