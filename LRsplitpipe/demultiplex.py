@@ -254,6 +254,14 @@ def get_args(cmdline=None):
 		help='FASTQ file output from Lima with LR-Split-seq reads.')
 	parser_score_linkers.add_argument('-o', dest='oprefix',
 		help='Output file path/prefix')
+	parser_score_linkers.add_argument('-k', dest='kit',
+		help='Kit used, {WT, WT_mini, WT_mega}'),
+	parser_score_linkers.add_argument('-c', dest='chemistry', default='v1',
+		help='Chemistry used, {v1, v2}'),
+	parser_score_linkers.add_argument('--max_linker_dist', dest='max_dist', default=None,
+		help='Maximum distance that a linker can be from the end of a read')
+	parser_score_linkers.add_argument('--max_read_len', dest='max_len', default=None)
+	parser_score_linkers.add_argument('--min_read_len', dest='min_len', default=None)
 	parser_score_linkers.add_argument('-t', dest='threads', default="1",
 		help='Number of threads to run on (multithreading is recommended)')
 	parser_score_linkers.add_argument('--chunksize', dest='chunksize', default="10**5",
