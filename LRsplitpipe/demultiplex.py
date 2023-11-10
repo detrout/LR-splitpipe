@@ -226,7 +226,7 @@ def get_args(cmdline=None):
 		help='Kit used, {WT, WT_mini, WT_mega}'),
 	parser_all.add_argument('-c', dest='chemistry', default='v1',
 		help='Chemistry used, {v1, v2}'),
-	parser_all.add_argument('-t', dest='threads',
+	parser_all.add_argument('-t', dest='threads', default="1",
 		help='Number of threads to run on (multithreading is recommended)')
 	parser_all.add_argument('--l1_mm', dest='l1_mm', default=3,
 		help='Number of allowable mismatches in linker1')
@@ -254,7 +254,7 @@ def get_args(cmdline=None):
 		help='FASTQ file output from Lima with LR-Split-seq reads.')
 	parser_score_linkers.add_argument('-o', dest='oprefix',
 		help='Output file path/prefix')
-	parser_score_linkers.add_argument('-t', dest='threads',
+	parser_score_linkers.add_argument('-t', dest='threads', default="1",
 		help='Number of threads to run on (multithreading is recommended)')
 	parser_score_linkers.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in at any given time')
@@ -275,7 +275,7 @@ def get_args(cmdline=None):
 		help='Kit used, {custom_1, WT, WT_mini, WT_mega}', default='WT')
 	parser_find_bcs.add_argument('-c', dest='chemistry', default='v1',
 		help='Chemistry used, {v1, v2}')
-	parser_find_bcs.add_argument('-t', dest='threads',
+	parser_find_bcs.add_argument('-t', dest='threads', default="1",
 		help='Number of threads to run on (multithreading is recommended)')
 	parser_find_bcs.add_argument('--l1_mm', dest='l1_mm', default=3,
 		help='Number of allowable mismatches in linker1')
@@ -305,7 +305,7 @@ def get_args(cmdline=None):
 		help='Kit used, {custom_1, WT, WT_mini, WT_mega}')
 	parser_process_bcs.add_argument('-c', dest='chemistry', default='v1',
 		help='Chemistry used, {v1, v2}')
-	parser_process_bcs.add_argument('-t', dest='threads',
+	parser_process_bcs.add_argument('-t', dest='threads', default="1",
 		help='Number of threads to run on (multithreading is recommended)')
 	parser_process_bcs.add_argument('--chunksize', dest='chunksize', default="10**5",
 		help='Number of lines to read in at any given time')
