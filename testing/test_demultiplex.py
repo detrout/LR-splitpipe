@@ -2,7 +2,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase
 
-from LRsplitpipe.demultiplex import main, get_args
+from LR_splitpipe.demultiplex import main, get_args
 
 testing = Path(__file__).parent
 
@@ -63,6 +63,6 @@ class TestDemultiplexMain(TestCase):
         self.assertEqual(args.kit, "WT")
 
     def test_version(self):
-        from LRsplitpipe import _version
+        from LR_splitpipe import _version
 
         self.assertEqual(len(_version.version_tuple), 4)

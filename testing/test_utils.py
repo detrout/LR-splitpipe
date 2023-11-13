@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 
-from LRsplitpipe.utils import (
+from LR_splitpipe.utils import (
     get_bc_round_set,
     load_barcodes,
     load_barcodes_set,

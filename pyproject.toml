@@ -7,7 +7,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "LRsplitpipe/_version.py"
+write_to = "LR_splitpipe/_version.py"
 
 [tool.tox]
 legacy_tox_ini = """
@@ -16,7 +16,7 @@ envlist=py{38,39,310,311,312}
 skip_missing_interpreters=True
 
 [testenv]
-commands=pytest --cov=LRsplitpipe -v testing/
+commands=pytest --cov=LR_splitpipe -v testing/
 extras =
     test
 """
