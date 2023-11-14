@@ -7,7 +7,7 @@ testing/*pycache*
 *ipynb_checkpoints*
 
 #setuptools_scm version file
-LRsplitpipe/_version.py
+LR_splitpipe/_version.py
 
 # directories created by build process
 .coverage
