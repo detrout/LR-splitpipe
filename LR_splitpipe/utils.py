@@ -1,3 +1,4 @@
+from pathlib import Path
 import pandas as pd
 import pickle
 import seaborn as sns
@@ -63,8 +64,7 @@ def load_barcodes(kit, chemistry):
 			key: query bc
 			item: corrected bc
 	"""
-	pkg_path = os.path.dirname(__file__)
-	pkg_path = '/'.join(pkg_path.split('/')[:-1])
+	pkg_path = Path(__file__).parent
 
 	bc_round_set = get_bc_round_set(kit, chemistry)
 
@@ -72,7 +72,7 @@ def load_barcodes(kit, chemistry):
 	for entry in bc_round_set:
 		bc = entry[0]
 		ver = entry[1]
-		fname = pkg_path+'/barcodes/bc_dict_{}.json'.format(ver)
+		fname = pkg_path / 'barcodes' / 'bc_dict_{}.json'.format(ver)
 		edit_dict = load_bc_dict(fname)
 		edit_dict_set[bc] = edit_dict
 
@@ -83,8 +83,7 @@ def load_barcodes_set(kit, chemistry):
 	"""
 	Load the barcodes. Adapted from the Parse biosciences pipeline.
 	"""
-	pkg_path = os.path.dirname(__file__)
-	pkg_path = '/'.join(pkg_path.split('/')[:-1])
+	pkg_path = Path(__file__).parent
 
 	bc_round_set = get_bc_round_set(kit, chemistry)
 
@@ -92,7 +91,7 @@ def load_barcodes_set(kit, chemistry):
 	for entry in bc_round_set:
 		bc = entry[0]
 		ver = entry[1]
-		fname = pkg_path + '/barcodes/bc_data_{}.csv'.format(ver)
+		fname = pkg_path / 'barcodes' / 'bc_data_{}.csv'.format(ver)
 		bc_df = pd.read_csv(fname)
 		bcs = set(bc_df.sequence.tolist())
 		bc_set[bc] = bcs
